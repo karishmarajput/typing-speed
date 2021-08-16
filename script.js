@@ -150,10 +150,11 @@ function checkword(letter){
   var res = str.charAt(str.length-1);
   if( res == " "){
     wordsPerMin++;
+    document.getElementById('inputTexts').value = "";
     if(str == (txtArr[i]+" ")){
       accuracy++;
     }
-    document.getElementById('inputTexts').value = "";
+    
     display += " ";
     display += txtArr[spaces++];
     console.log(display.split(' '));
