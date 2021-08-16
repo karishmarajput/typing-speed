@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Typing Speed</title>
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="page-header">
+            <h1>TEST YOUR TYPING SPEED!!! </h1>
+        </div>
+        <div id="app" class=""></div>
+        <div class="resultdiv">
+            <div class="well wordsPerMin" id="wordsPerMin">0<h5>words/min</h5></div>
+            <div class="well charPerMin" id="charPerMin">0<h5>no. of key strokes</h5></div>
+            <div class="well accuracy" id="accuracy">0<h5>accuracy</h5></div>
+        </div>
+        <div class="well input">
+           
+            <div class="displayText" id="displayText"></div>
+            <div class="inputText">
+                <input  class="inputTexts" id="inputTexts" placeholder="Start typing" onkeyup="checkword(this)">
+            </div>
+        </div>
+        
+    </div>
+    <div class="message" id="message">
+        <div id="firstPart">
+            <div class="image-div" id="image-div">
+                <img src="./images/turtle-type.jpeg" id="image1">
+                <img src="./images/rabbit.png" id="image2">
+                <img src="./images/tiger-typing.jpg" id="image3">
+            </div>
+            <div class="message-div" id="message-div"></div>
+            <div class="close-div" id="close-div">
+                <button onclick="tryAgain()">
+                    <img src="./images/cross.png" id="cross">
+                </button></div>
+        </div>
+        <div id="secondPart">
+            <button class="btn btn-warning" onclick="tryAgain()">Try Again</button>
+        </div>
+        
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
