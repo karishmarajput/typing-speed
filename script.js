@@ -157,9 +157,7 @@ function checkword(letter){
     
     display += " ";
     display += txtArr[spaces++];
-    console.log(display.split(' '));
     let display2 = display.split(' ');
-    console.log(display2);
     if(firstspace == false){
       display2.shift();
       firstspace = true;
@@ -169,7 +167,7 @@ function checkword(letter){
     var typeWord = display2[0];
     display2.shift();
     display2 = " "+display2.join(' '); 
-    console.log(typeWord +display2);
+   
     
     document.getElementById('displayText').innerHTML = '<p class= "typeWord" id="typeWord">' + typeWord + '</p><p class="restWord">' + display2 + '</p>';
     i++;
@@ -186,10 +184,10 @@ function check(){
   document.getElementById('message').style.display="flex";
   document.getElementById('container').style.opacity= 0.5;
   document.getElementById('inputTexts').style.display = "none";
-  if(wordsPerMin <= 35){
+  if(accuracy <= 35){
     document.getElementById('image1').style.display= "block";
     messageToBeDisplay = "You're a Turtle.";
-  }else if( wordsPerMin <= 42 ){
+  }else if(accuracy <= 42 ){
     document.getElementById('image2').style.display= "block";
     messageToBeDisplay = "You're a Rabbit";
   }else{
